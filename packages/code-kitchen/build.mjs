@@ -6,7 +6,7 @@ import fs from "fs";
 await $`rimraf dist`;
 
 // Build with [tsup](https://tsup.egoist.sh)
-await $`tsup src/index.ts --format cjs,esm --dts-resolve`;
+await $`tsup src/index.ts --format cjs,esm --dts-resolve --target es2020`;
 
 await $`mv dist/index.css dist/styles.css`;
 
